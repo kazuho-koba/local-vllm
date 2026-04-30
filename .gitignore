@@ -1,0 +1,19 @@
+# secrets
+.env
+
+# model/cache files
+models/
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+*.onnx
+
+# logs
+logs/
+*.log
+
+# python
+__pycache__/
+.venv/
