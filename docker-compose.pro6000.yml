@@ -26,3 +26,4 @@ services:
       - "0.90"
       - --max-model-len
       - "8192"
+      # - --enforce-eager
