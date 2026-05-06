@@ -1,6 +1,6 @@
 services:
   vllm:
-    image: vllm/vllm-openai:latest
+    image: vllm/vllm-openai:v0.8.5
     container_name: vllm-5060ti2
     runtime: nvidia
     ports:
@@ -10,6 +10,7 @@ services:
     environment:
       - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}
       - HF_HOME=/models/huggingface
+      - CUDA_VISIBLE_DEVICES=0
     volumes:
       - ./models:/models
     ipc: host
@@ -21,8 +22,8 @@ services:
       - --port
       - "8000"
       - --tensor-parallel-size
-      - "2"
+      - "1"
       - --gpu-memory-utilization
-      - "0.85"
+      - "0.90"
       - --max-model-len
       - "4096"

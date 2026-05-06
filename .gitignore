@@ -3,6 +3,8 @@
 
 # model/cache files
 models/
+ollama/
+open-webui/
 *.safetensors
 *.bin
 *.gguf
@@ -12,8 +14,10 @@ models/
 
 # logs
 logs/
+tmp/
 *.log
 
 # python
 __pycache__/
+*.pyc
 .venv/
